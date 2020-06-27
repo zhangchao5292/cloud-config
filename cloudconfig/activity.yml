@@ -1,1 +1,2 @@
-user=abc.insf
+spring:
+  name: jack
