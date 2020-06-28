@@ -1,2 +1,11 @@
-spring:
-  version: 4.1
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: "http://47.94.140.72:5678/eureka/"
+  instance:
+    leaseExpirationDurationInSeconds: 15
+    leaseRenewalIntervalInSeconds: 10
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${spring.application.name}:${server.port}
+  server:
+    enable-self-preservation: true
